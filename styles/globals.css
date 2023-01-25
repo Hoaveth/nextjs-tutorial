@@ -43,15 +43,12 @@ footer {
   border-top: 1px solid #eaeaea;
 }
 
-.links {
-  color: rgb(40, 40, 209);
-}
 
 .not-found {
   text-align: center;
 }
 
-.not-found a {
+.links {
   color: #4979ff;
   text-decoration: underline;
 }

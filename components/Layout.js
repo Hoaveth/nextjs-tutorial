@@ -1,15 +1,23 @@
+import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <Navbar />
-      <div className={styles.container}>{children}</div>
+    <>
+      <Head>
+        <title>Ninja List | {children.type.name}</title>
+        <meta name="keywords" content="ninjas" />
+      </Head>
 
-      <Footer />
-    </div>
+      <div>
+        <Navbar />
+        <div className={styles.container}>{children}</div>
+
+        <Footer />
+      </div>
+    </>
   );
 };
 
