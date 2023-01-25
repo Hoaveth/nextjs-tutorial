@@ -4,17 +4,20 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
+  {
+    console.log(children.type.name);
+  }
   return (
     <>
       <Head>
-        <title>Ninja List | {children.type.name}</title>
+        <title>
+          Ninja List | {children.type.name ? children.type.name : ""}
+        </title>
         <meta name="keywords" content="ninjas" />
       </Head>
-
       <div>
         <Navbar />
         <div className={styles.container}>{children}</div>
-
         <Footer />
       </div>
     </>
